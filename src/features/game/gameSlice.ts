@@ -7,7 +7,8 @@ const initialState: GameState = {
     currentDifficulty: null,
     currentCaseId: null,
     answers: [],
-    status: 'idle'
+    status: 'idle',
+    usedHints: {}, 
 }
 
 const gameSlice = createSlice({

@@ -53,6 +53,6 @@ export const selectStats = (state: RootState) => {
     return {
         solvedTotal,
         solvedCorrect,
-
+        byDifficulty,
     }
 }
