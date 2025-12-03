@@ -8,9 +8,9 @@ export default function NavMenu() {
             <nav className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
                 <span className="font-bold text-lg tracking-wide">Detective</span>
                 <div className="flex gap-2">
-                    <NavLink >Играть</NavLink>
-                    <NavLink>Профиль</NavLink>
-                    <NavLink>О проекте</NavLink>
+                    <NavLink to='/play' className={({ isActive }) => `${base} ${isActive ? active : ''}`}>Играть</NavLink>
+                    <NavLink to='/profile' className={({ isActive }) => `${base} ${isActive ? active : ''}`}>Профиль</NavLink>
+                    <NavLink to='/about' className={({ isActive }) => `${base} ${isActive ? active : ''}`}>О проекте</NavLink>
                 </div>
             </nav>
         </header>
