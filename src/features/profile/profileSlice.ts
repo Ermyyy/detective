@@ -3,11 +3,12 @@ import { type RootState } from '../../app/store';
 
 export interface ProfileState {
   nickname: string;
-  avatarUrl?: string;
+  avatarUrl?: string | null;
 }
 
 const initialState: ProfileState = {
   nickname: 'Detective_001',
+  avatarUrl: null,
 };
 
 const profileSlice = createSlice({
@@ -17,8 +18,8 @@ const profileSlice = createSlice({
     setNickname(state, action: PayloadAction<string>) {
       state.nickname = action.payload;
     },
-    setAvatarUrl(state, action: PayloadAction<string | undefined>) {
-      state.avatarUrl = action.payload;
+    setAvatarUrl(state, action: PayloadAction<string | undefined | null>) {
+      state.avatarUrl = action.payload ?? null;
     },
   },
 });
